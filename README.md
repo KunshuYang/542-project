@@ -1,67 +1,72 @@
 
 # Fine-Grained Bird Species Classification on CUB-200 with ResNet-50
 
-## Overview
-This repository holds the deliverables for our project on fine-grained classification of 200 bird species using a ResNet-50 pipeline on the CUB-200-2011 dataset. We combine strong data augmentations, OneCycleLR scheduling, phased fine-tuning, label smoothing, MixUp, and CBAM attention to achieve 79.2 % Top-1 accuracy with minimal overfitting.
+## 📋 Project Overview
+We tackle the fine-grained classification of 200 bird species in the CUB-200-2011 dataset by designing an efficient, single-model pipeline based on ResNet-50. By systematically integrating:
 
-## Repository Structure
+- **Aggressive augmentations**: RandomResizedCrop, ColorJitter, RandomErasing, MixUp  
+- **Regularization**: Label smoothing & weight decay 
+- **Attention**: CBAM modules for part-focused feature refinement  
+
+we achieve **79.2 % ± 0.1 % Top-1**  accuracy, with validation accuracy stabilizing above 77 % by epoch 20 and only minimal overfitting.
+
+## 📁 Repository Contents
 ```
-├── README.md
-├── final\_report.pdf    # Full write-up: motivation, methodology, results, conclusion
-├── slide.pptx          # Slide deck: overview, key results, next steps
-│
-├── branches/
-│   ├── midpoint        # Code and experiments up through the midpoint report
-│   └── final           # Final code and experiments matching the final report
-```
-pecies Classification on CUB-200 with ResNet-50
 
-- **final_report.pdf**  
-  Detailed report covering:
-  - Problem statement & motivation  
-  - Related work & code references  
-  - Methodology & model architecture  
-  - Data preparation & preprocessing  
-  - Quantitative results & error analysis  
-  - Conclusions & future directions  
+├── README.md           ← this document
+├── final\_report.pdf    ← full write-up (motivation, methodology, results, conclusion)
+├── slide.pptx          ← project presentation slides
+├── assets/
+│   └── videos/
+│       └── demo.mp4    ← short demo of the trained model in action
+├── midpoint/           ← code & experiments up to midpoint report
+└── final/              ← polished scripts, logs, and model weights for final evaluation
 
-- **slide.pptx**  
-  Presentation slides summarizing:
-  - Objectives & approach  
-  - Core techniques (augmentations, OneCycleLR, CBAM, MixUp)  
-  - Main results (Top-1/Top-5, learning curves)  
-  - Error-mode visualizations  
-  - Conclusions & next steps  
+````
 
-## How to View
+## 📄 How to Explore
 
-1. **Checkout the midpoint branch** for the code & experiments used in our midpoint report:
+1. **Read the report**  
+   Open `final_report.pdf` for detailed descriptions of:
+   - Problem statement & refined objectives  
+   - Related work & open-source references  
+   - Dataset preparation & preprocessing  
+   - Model architecture & training regimen  
+   - Quantitative results, learning curves & error analysis  
+   - Conclusions & future work  
 
-   git checkout midpoint
+2. **View the slides**  
+   Open `slide.pptx` for a concise summary of our approach and key findings.
 
-2. **Switch to the final branch** for the final implementation and trained models:
- 
-   git checkout final
-   
-3. Open **final\_report.pdf** for the full write-up.
-4. Open **slide.pptx** for the presentation summary.
+3. **Inspect code and experiments**  
+   - `midpoint/` branch: scripts and notebooks used in the project midpoint.  
+   - `final/` branch: final training scripts and weights matching the report’s results.  
 
+   ```bash
+   # Switch between branches:
+   git checkout midpoint   # midpoint experiments
+   git checkout final      # final implementation
 
-## Key References
+## 📚 Key References
 
-* Wah et al., “The Caltech–UCSD Birds-200-2011 Dataset,” 2011.
-* He et al., “Deep Residual Learning for Image Recognition,” CVPR 2016.
-* Woo et al., “CBAM: Convolutional Block Attention Module,” ECCV 2018.
-* Zhang et al., “mixup: Beyond Empirical Risk Minimization,” ICLR 2018.
-* Zhong et al., “Random Erasing Data Augmentation,” AAAI 2020.
-* Smith & Topin, “Super-Convergence,” 2019.
+* Wah et al., *The Caltech–UCSD Birds-200-2011 Dataset*, 2011.
+* He et al., *Deep Residual Learning for Image Recognition*, CVPR 2016.
+* Woo et al., *CBAM: Convolutional Block Attention Module*, ECCV 2018.
+* Zhang et al., *mixup: Beyond Empirical Risk Minimization*, ICLR 2018.
+* Zhong et al., *Random Erasing Data Augmentation*, AAAI 2020.
+* Smith & Topin, *Super-Convergence*, 2019.
 
-## Acknowledgements
+*(See `final_report.pdf` bibliography for full citation details.)*
+
+## 🤝 Acknowledgements
 
 * **PyTorch & torchvision** for ResNet-50 implementation
-* **jongchan/attention-module** for CBAM code
-* **Facebook Research** for MixUp implementation
+* **jongchan/attention-module** for CBAM reference code
+* **Facebook Research** for the original MixUp implementation
+
+---
 
 **Authors:** Shiheng Xu · Renjie Fan · Kunshu Yang
 **Date:** May 2025
+
 
