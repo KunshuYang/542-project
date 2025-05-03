@@ -4,7 +4,7 @@
 ## 📋 Project Overview
 We tackle the fine-grained classification of 200 bird species in the CUB-200-2011 dataset by designing an efficient, single-model pipeline based on ResNet-50. By systematically integrating:
 
-- **Aggressive augmentations**: RandomResizedCrop, ColorJitter, RandomErasing, MixUp  
+- **Aggressive augmentations**: RandomResizedCrop, ColorJitter, CBAM, MixUp  
 - **Regularization**: Label smoothing & weight decay 
 - **Attention**: CBAM modules for part-focused feature refinement  
 
