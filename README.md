@@ -27,7 +27,6 @@ This repository holds the deliverables for our project on fine-grained classific
 
 1. Open **final_report.pdf** for the full report.  
 2. Open **slide.pptx** for the presentation summary.
-3. 
 
 ## Acknowledgements
 
