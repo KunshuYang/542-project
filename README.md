@@ -5,7 +5,7 @@
 This repository holds the deliverables for our project on fine-grained classification of 200 bird species using a ResNet-50 pipeline on the CUB-200-2011 dataset. We combine strong data augmentations, OneCycleLR scheduling, phased fine-tuning, label smoothing, MixUp, and CBAM attention to achieve 79.2 % Top-1 accuracy with minimal overfitting.
 
 ## Repository Structure
-
+```
 ├── README.md
 ├── final\_report.pdf    # Full write-up: motivation, methodology, results, conclusion
 ├── slide.pptx          # Slide deck: overview, key results, next steps
@@ -13,9 +13,8 @@ This repository holds the deliverables for our project on fine-grained classific
 ├── branches/
 │   ├── midpoint        # Code and experiments up through the midpoint report
 │   └── final           # Final code and experiments matching the final report
-
-
-## Files
+```
+pecies Classification on CUB-200 with ResNet-50
 
 - **final_report.pdf**  
   Detailed report covering:
@@ -66,4 +65,3 @@ This repository holds the deliverables for our project on fine-grained classific
 **Authors:** Shiheng Xu · Renjie Fan · Kunshu Yang
 **Date:** May 2025
 
-```
